@@ -42,7 +42,7 @@ public class PiSpout implements IBatchSpout {
         if (values.isEmpty()) {
             for (int i = 0; i < batchSize; i++) {
                 final Values v = new Values();
-                final char c = generator.emit();
+                final int c = generator.emit();
                 v.add(c);
                 values.add(v);
             }
